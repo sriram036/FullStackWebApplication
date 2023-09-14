@@ -42,10 +42,10 @@ class ListEmployeeComponent extends Component {
             <table className="table table-striped table-bordered">
                 <thead>
                     <tr>
-                        <th>Employee Name</th>
-                        <th>Employee Email</th>
-                        <th>Employee Salary</th>
-                        <th>Actions</th>
+                        <th style={{textAlign:'center'}}>Employee Name</th>
+                        <th style={{textAlign:'center'}}>Employee Email</th>
+                        <th style={{textAlign:'center'}}>Employee Salary</th>
+                        <th style={{textAlign:'center'}}>Actions</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -53,10 +53,10 @@ class ListEmployeeComponent extends Component {
                         this.state.employees.map(
                             employee => 
                             <tr key = {employee.id}>
-                                <td>{employee.name}</td>
-                                <td>{employee.email}</td>
-                                <td>{employee.salary}</td>
-                                <td>
+                                <td style={{textAlign:'center'}}>{employee.name}</td>
+                                <td style={{textAlign:'center'}}>{employee.email}</td>
+                                <td style={{textAlign:'center'}}>{employee.salary}</td>
+                                <td style={{textAlign:'center'}}>
                                     <button onClick={ () => this.editEmployee(employee.id)} className="btn btn-info">Edit</button>
                                     <button style={{marginLeft: "20px"}} onClick={ () => this.deleteEmployee(employee.id)} className="btn btn-danger">Remove</button>
                                     <button style={{marginLeft: "20px"}} onClick={ () => this.viewEmployee(employee.id)} className="btn btn-info">View</button>
